@@ -1,0 +1,4 @@
+.venv/
+scraping_sites/__pycache__/
+news
+sites
