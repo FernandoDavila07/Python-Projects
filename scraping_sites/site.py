@@ -5,8 +5,8 @@ class Site:
     def __init__(self, site):
         self.site = site
 
-    def update_news(self):
-        if self.site.lower() == 'globo':
+    def update_news(self): # Método para atualizar as notícias do site
+        if self.site.lower() == 'globo': #dicionario de noticias da globo
             url = 'https://www.globo.com/'
             browsers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome / 86.0.4240.198Safari / 537.36"}
             page = requests.get(url,headers = browsers)
@@ -29,7 +29,7 @@ class Site:
 
 
 
-        if self.site.lower() == 'veja':
+        if self.site.lower() == 'veja': #dicionario de noticias da veja
             url = 'https://veja.abril.com.br/'
             browsers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome / 86.0.4240.198Safari / 537.36"}
             page = requests.get(url,headers = browsers)
@@ -57,7 +57,7 @@ class Site:
             self.news = news_dict_veja 
         
         
-        if self.site.lower() == 'cnn':
+        if self.site.lower() == 'cnn': #dicionario de noticias da cnn
             url = 'https://www.cnnbrasil.com.br/'
             browsers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome / 86.0.4240.198Safari / 537.36"}
             page = requests.get(url,headers = browsers)
@@ -82,7 +82,7 @@ class Site:
             self.news = news_dict_cnn
 
 
-        if self.site.lower() == 'bbc':
+        if self.site.lower() == 'bbc': #dicionario de noticias da bbc
             url = 'https://www.bbc.com/portuguese'
             browsers = {'User-Agent': "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome / 86.0.4240.198Safari / 537.36"}
             page = requests.get(url,headers = browsers)
